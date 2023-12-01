@@ -23,10 +23,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create A Domain Controller and Ensure Connectivity Between the Client and Domain Controller
+- Install Active Directory 
+- Create an Admin and Normal User
+- Setup Remote Desktop and Create Additional Users
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -34,7 +34,24 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+When creating a domain controller and ensuring connectivity between the client and domain controller, I used Microsoft Azure.  
+Setting up the domain controler was essentially running Windows server 2020 and running active directory on it. 
+I had the client ping the domain controler since I connected the client to the domain controler. At first it failed, since the client could not recognize the domain controler, so I fixed a setting on the domain controller. Ten I pinged the domain controler from the client and it worked after fixing some DHCP settings.   
+</p>
+<br />
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+I installed Active Directory onto the domain controler to create the domain and promote DC-1 (domain controller name) to a proper domain controller. Then I had to restart the domain controller to complete the promotion DC-1. 
+<p>
+</p>
+  
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+I created an admin and normal user within Active Directory. I also created several Organizational units to represent employees, admins, and clients. 
+    
 </p>
 <br />
 
@@ -42,14 +59,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+I set up a remote desktop after connecting the client virtual machine to the domain I created when setting up the active directory. When setting up the remote desktop connection it was important to allow the domain users to access remote desktop. When logging into the client computer as admin was one of the ways to allow remote desktop. Then I used a powershell script to create users to test the remote desktop connection.  
+  </p>
 <br /># configure-ad
