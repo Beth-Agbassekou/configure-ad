@@ -31,7 +31,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1440" alt="Screenshot 2023-11-28 at 10 52 25 PM" src="https://github.com/Beth-Agbassekou/configure-ad/assets/148320585/38391318-a09d-4fb9-9ae0-a2e8765bc87e">
+<img width="1440" alt="Screenshot 2023-11-28 at 10 52 32 PM" src="https://github.com/Beth-Agbassekou/configure-ad/assets/148320585/ea25d83d-aa43-44a4-8680-4b9bd7add4d4">
+
+
 </p>
 <p>
 When creating a domain controller and ensuring connectivity between the client and domain controller, I used Microsoft Azure.  
